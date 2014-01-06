@@ -4,10 +4,14 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+		"raveren/kint": "dev-master",
+		"cartalyst/sentry": "2.0.*"
 	},
 	"autoload": {
 		"classmap": [
+			"app/queues",
+			"app/core",
 			"app/commands",
 			"app/controllers",
 			"app/models",

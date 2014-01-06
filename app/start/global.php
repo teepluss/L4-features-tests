@@ -31,7 +31,8 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+//Log::useFiles(storage_path().'/logs/laravel.log');
+Log::getMonolog()->pushHandler(new Monolog\Handler\ChromePHPHandler());
 
 /*
 |--------------------------------------------------------------------------

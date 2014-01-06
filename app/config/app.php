@@ -107,6 +107,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// Teepluss packages.
+		'Teepluss\Restable\RestableServiceProvider'
 	),
 
 	/*
@@ -173,6 +175,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+		// Teepluss packages.
+		'Restable'        => 'Teepluss\Restable\Facades\Restable'
 	),
 
 );
