@@ -34,7 +34,7 @@ return array(
 			'password'  => '',
 			'key'       => '',
 			'keyphrase' => '',
-			'root'      => '~/Sites/Laravel/learn',
+			'root'      => '',
 		),
 
 	),
