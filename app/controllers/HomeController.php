@@ -15,8 +15,22 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function getIndex()
 	{
+		$blogs = Blog::with(array('comments' => function($q)
+        {
+            $q->recent();
+        }))
+        ->get();
+
+        foreach ($blogs as $blog)
+        {
+            foreach ($blog->comments as $comment)
+            {
+                s($comment->toArray());
+            }
+        }
+
 		return View::make('hello');
 	}
 

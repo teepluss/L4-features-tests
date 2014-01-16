@@ -1,24 +1,24 @@
 <?php
 
 /**
- * Package theme example.
+ * Package UP.
  */
-Route::group(array('prefix' => 'config'), function()
+Route::group(array('prefix' => 'upload'), function()
 {
     Route::get('/', function()
     {
-        s(Config::get('app.url'));
+        return View::make('upload');
     });
-});
 
-/**
- * SSH run.
- */
-Route::group(array('prefix' => 'ssh'), function()
-{
-    Route::get('/git', function()
+    Route::post('/', function()
     {
-        //
+        $location = app('path.public').'/files/base64-content.txt';
+
+        $base64 = file_get_contents($location);
+
+        $results = UP::inject(array('type' => 'base64'))->upload(Blog::find(1), $base64)->getMasterResult();
+
+        sd($results);
     });
 });
 
@@ -68,7 +68,7 @@ Route::group(array('prefix' => 'eloquent'), function()
             }
         }
 
-        sd(DB::getQueryLog());
+        s(DB::getQueryLog());
     });
 
     /**
@@ -140,7 +140,7 @@ Route::group(array('prefix' => 'queue'), function()
 /**
  * Nothing here.
  */
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array(
+    'as'   => 'home',
+    'uses' => 'HomeController@getIndex'
+));

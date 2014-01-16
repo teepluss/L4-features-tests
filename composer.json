@@ -6,7 +6,9 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"raveren/kint": "dev-master",
-		"cartalyst/sentry": "2.0.*"
+		"cartalyst/sentry": "2.0.*",
+		"itsgoingd/clockwork": "dev-master",
+		"teepluss/theme": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

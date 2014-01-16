@@ -13,6 +13,7 @@ return array(
 	|
 	*/
 
+	app('path.base').'/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php'
 
 
 );

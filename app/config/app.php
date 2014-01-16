@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'pn2WayXAsyPaYWm6lBTLpWLOgUIaSqnk',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -107,7 +107,12 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// Packages
+		'Clockwork\Support\Laravel\ClockworkServiceProvider',
+
 		// Teepluss packages.
+		'Teepluss\Up\UpServiceProvider',
+		'Teepluss\Theme\ThemeServiceProvider',
 		'Teepluss\Restable\RestableServiceProvider'
 	),
 
@@ -175,7 +180,12 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+		// Package aliases.
+		'Clockwork' 	  => 'Clockwork\Support\Laravel\Facade',
+
 		// Teepluss packages.
+		'UP' 			  => 'Teepluss\Up\Facades\Up',
+		'Theme'     	  => 'Teepluss\Theme\Facades\Theme',
 		'Restable'        => 'Teepluss\Restable\Facades\Restable'
 	),
 
